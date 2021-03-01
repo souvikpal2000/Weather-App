@@ -1,0 +1,51 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    background: #242424;
+    font-size: 120%;
+}
+.app{
+	background: #000000d0;
+    color: white;
+    padding: 2em;
+    border-radius: 30px;
+    width: 100%;
+    max-width: 420px;
+    margin: 1em;
+}
+.place{
+	border: none;
+    padding: 0.4em 1em;
+    border-radius: 24px;
+    background: #7c7c7c2b;
+    color: white;
+    font-family: inherit;
+}
+input[type=text]:focus{
+  background: #d1d1d1;
+}
+.search{
+	border-radius: 0px 24px 24px 0px;
+}
+.sky-condition{
+	display: flex;
+	flex-direction: column;
+}
+.wicon{
+	width: 30%;
+}
+.hidden-property{
+	max-height: 0px;
+    position: relative;
+}
+.show-property{
+	margin-top: 25px;
+	color: white;
+    position: relative;
+    top: 0;
+    left: 20px;
+}
