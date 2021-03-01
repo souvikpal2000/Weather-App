@@ -28,7 +28,7 @@ else
 
 async function currentLocation(lat, lon)
 {
-    const url = `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${token}`;
+    const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${token}`;
     console.log(url);
     const res = await fetch(url);
     const data = await res.json();
@@ -41,7 +41,7 @@ async function currentLocation(lat, lon)
 async function requiredWeather()
 {
     const place = document.querySelector(".place");
-    const url = `http://api.openweathermap.org/data/2.5/weather?q=${place.value}&appid=${token}`;
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${place.value}&appid=${token}`;
     const res = await fetch(url);
     const data = await res.json();
 
