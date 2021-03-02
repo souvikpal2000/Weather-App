@@ -49,12 +49,6 @@ input[type=text]:focus{
     top: 0;
     left: 20px;
 }
-.spinner{
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-}
 .spinner-div{
 	display: flex;
 	flex-direction: row;
