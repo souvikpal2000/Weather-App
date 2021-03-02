@@ -27,13 +27,17 @@ else
 }
 
 async function currentLocation(lat, lon)
-{
+{ 
     const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${token}`;
     console.log(url);
     const res = await fetch(url);
     const data = await res.json();
     //console.log(data);
     //console.log(data.name);
+
+    var spinner = document.querySelector(".spinner-div");
+    console.log(spinner);
+    spinner.remove();
 
     putData(data);
 }
@@ -57,7 +61,6 @@ async function requiredWeather()
 
 function putData(data)
 {
-    console.log(data);
     loc.innerHTML = data.name;
 
     var num = data.main.temp - 273.15;
