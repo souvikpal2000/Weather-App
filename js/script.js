@@ -36,7 +36,7 @@ async function currentLocation(lat, lon)
     //console.log(data.name);
 
     var spinner = document.querySelector(".spinner-div");
-    console.log(spinner);
+    //console.log(spinner);
     spinner.remove();
 
     putData(data);
@@ -46,16 +46,23 @@ async function requiredWeather()
 {
     const place = document.querySelector(".place");
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${place.value}&appid=${token}`;
+    console.log(url);
     const res = await fetch(url);
     const data = await res.json();
 
-    console.log(place.value);
+    //console.log(place.value);
     if(data.cod == "404" || place.value == "")
     {
         alert("Location not found!!");
     }
     else
     {
+        var spinner = document.querySelector(".spinner-div");
+        //console.log(spinner);
+        if(spinner != null)
+        {
+            spinner.remove();
+        }
         putData(data)
     }
 }
