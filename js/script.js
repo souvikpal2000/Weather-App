@@ -49,7 +49,8 @@ async function requiredWeather()
     const res = await fetch(url);
     const data = await res.json();
 
-    if(data.cod == "404")
+    console.log(place.value);
+    if(data.cod == "404" || place.value == "")
     {
         alert("Location not found!!");
     }
